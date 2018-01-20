@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Weather Widget</title>
+</head>
+<body>
+<div class="root">
+  <div class="widget">
+
+    <header class="widget__header">
+      <div class="date">
+        <span>Weather at</span>
+        <div class="date__time">23:28</div>
+        <div class="date__day-month">Mon Jan 19</div>
+      </div>
+      <div class="search">
+        <div class="search__geo">
+          <span class="search__label">search by geolocation</span>
+          <button class="search__btn btn-refresh"
+                  onclick="getWeatherByGeolocation()">
+          </button>
+        </div>
+        <div class="search__coords">
+          <span class="search__label">search by coords</span>
+          <div class="coords-group">
+            <div class="coords__input-group">
+              <input id="lat" class="coords__input" type="text" placeholder="latitude"
+                     onfocus="lat.value = ''">
+              <input id="lon" class="coords__input" type="text" placeholder="longitude"
+                     onfocus="lon.value = ''">
+            </div>
+            <button class="search__btn btn-load"
+                    onclick="getWeatherByLatLon(lat.value, lon.value);">
+              Load
+            </button>
+          </div>
+        </div>
+
+        <div class="errors-group">
+          <div class="errors"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="widget__main">
+      <div class="main__left-col">
+        <div class="temp">
+          <div class="temp__deg">3*C</div>
+        </div>
+        <div class="icon-group">
+          <img class="icon" src="" alt="weather-icon" />
+          <div class="description">Cloudly</div>
+        </div>
+      </div>
+      <div class="main__right-col">
+        <div class="place">
+          <div class="place__city">Minsk, BY</div>
+          <div class="place__coords">[57.356890, 25.990077]</div>
+        </div>
+        <div class="details">
+          <div class="details__pressure">1015 hPa</div>
+          <div class="details__humidity">80%</div>
+          <div class="details__wind">wind: 15 m/s</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="widget__footer">
+      <span>&copy; 2018 Weather from
+        <a href="http://openweathermap.org/"> OpenWeatherMap</a>
+      </span>
+    </footer>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
