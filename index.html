@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Weather Widget</title>
 </head>
 <body>
@@ -12,14 +12,14 @@
     <header class="widget__header">
       <div class="date">
         <span>Weather at</span>
-        <div class="date__time">23:28</div>
-        <div class="date__day-month">Mon Jan 19</div>
+        <div class="date__time"></div>
+        <div class="date__day-month"></div>
       </div>
       <div class="search">
         <div class="search__geo">
           <span class="search__label">search by geolocation</span>
           <button class="search__btn btn-refresh"
-                  onclick="getWeatherByGeolocation()">
+                  onclick="getWeatherByGeolocation();">
           </button>
         </div>
         <div class="search__coords">
@@ -47,22 +47,22 @@
     <main class="widget__main">
       <div class="main__left-col">
         <div class="temp">
-          <div class="temp__deg">3*C</div>
+          <div class="temp__deg"></div>
         </div>
         <div class="icon-group">
           <img class="icon" src="" alt="weather-icon" />
-          <div class="description">Cloudly</div>
+          <div class="description"></div>
         </div>
       </div>
       <div class="main__right-col">
         <div class="place">
-          <div class="place__city">Minsk, BY</div>
-          <div class="place__coords">[57.356890, 25.990077]</div>
+          <div class="place__city"></div>
+          <div class="place__coords"></div>
         </div>
         <div class="details">
-          <div class="details__pressure">1015 hPa</div>
-          <div class="details__humidity">80%</div>
-          <div class="details__wind">wind: 15 m/s</div>
+          <div class="details__pressure"></div>
+          <div class="details__humidity"></div>
+          <div class="details__wind"></div>
         </div>
       </div>
     </main>
@@ -75,7 +75,7 @@
   </div>
 </div>
 
-<script src="./script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("./images/page-bg-HQ-min.jpg") center center no-repeat fixed;
+  background: url("../images/page-bg-HQ-min.jpg") center center no-repeat fixed;
   background-size: cover;
 }
 
@@ -61,7 +61,7 @@ body {
   height: 1rem;
   vertical-align: middle;
   border: none;
-  background: url("./images/refresh-icon.png") center center no-repeat;
+  background: url("../images/refresh-icon.png") center center no-repeat;
   background-size: contain;
 }
 

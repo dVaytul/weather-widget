@@ -4,7 +4,7 @@ getWeatherByGeolocation();
 
 // Get weather by geolocation, on click "btn-refresh"
 function getWeatherByGeolocation() {
-  showError();
+  clearError();
   clearInput();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showErrorOnGeo);
@@ -42,7 +42,7 @@ function getWeatherByLatLon(lat, lon) {
   lon = lon.replace(',', '.').trim();
 
   var validatedCoords = validateCoords(lat, lon);
-  showError();
+  clearError();
 
   if(validatedCoords === true) {
     getWeather(lat, lon, weatherAppID);
@@ -51,14 +51,14 @@ function getWeatherByLatLon(lat, lon) {
   }
 }
 
-// Show error on page OR clear error's field (call without argument)
+// Show error on page
 function showError(error) {
-  var errorDiv = document.getElementsByClassName("errors")[0];
-  if(error) {
-    errorDiv.innerHTML = error;
-  } else {
-    errorDiv.innerHTML = "";
-  }
+  document.getElementsByClassName("errors")[0].innerHTML = error;
+}
+
+// Clear error field
+function clearError() {
+  document.getElementsByClassName("errors")[0].innerHTML = "";
 }
 
 // Make the weather request
@@ -175,5 +175,5 @@ function clearInput() {
   var latInput = document.getElementById("lat"),
       lonInput = document.getElementById("lon");
 
-  lat.value = lon.value = "";
+  latInput.value = lonInput.value = "";
 }
